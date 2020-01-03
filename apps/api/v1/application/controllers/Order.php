@@ -10,8 +10,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @link		''
  */
 
-// This can be removed if you use __autoload() in config.php OR use Modular Extensions
-
 class Order extends CI_BASE_Controller 
 {
     public $defaultPageCount = 1;

@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @link https://in.linkedin.com/in/amirullahkhan
  * @version Version 1.0
  */
-class Pojo_model extends CI_Model
+class Pojo_Model extends CI_Model
 {
     public $readDb1 = 'wb';
     public $writeDb1 = 'wb';
@@ -720,9 +720,21 @@ class Pojo_model extends CI_Model
         return $query->result();
     }
 
-    public function getPojosByMultiJoin($dbName, $table, $paramArr, $sortcol=null, $order = 'asc', $offset = 0, $limit = 0, $joinTable = null, $joinCondition = null, $joinType = 'inner', $joinTable2 = null, $joinCondition2 = null, $joinType2 = 'inner', $joinTable3 = null, $joinCondition3 = null, $joinType3 = 'inner', $select = null, $group_by = null, $return=0, $param_like=array(), $paramArr_in=array())
+    public function getPojosByMultiJoin($qyeryData)
     {
         try {
+            $dbName = $this->readDb1;
+            $select = $sortcol = $group_by = $table = $joinTable = $joinCondition = $joinTable2 = $joinCondition2 = $paramArr = $joinTable3 = $joinCondition3 =null ;
+            $order = 'asc';
+            $offset = $limit = $return =0;
+            $joinType = $joinType2 = $joinType3 = 'inner';
+            $param_like = $paramArr_in = [];
+            if (is_array($qyeryData)) {
+                foreach ($qyeryData as $key => $val) {
+                    $$key = $val;
+                }
+            }
+            
             $this->db = $this->shard->get_Generic_Db($dbName, true);
             if ($select != null) {
                 $this->db->select($select, false);
@@ -786,7 +798,7 @@ class Pojo_model extends CI_Model
             return ['error' => true];
         }
         
-        return ($return == 1 ? $query->result_array() : ($return==2?$query->row_array() : $query->result()));
+        return ($return == 1 ? $query->result_array() : ($return == 2 ? $query->row_array() : $query->result()));
      }
 
     public function getPojosbyJoin($dbName, $table, $paramArr, $sortcol=null, $order = 'asc', $offset = 0, $limit = 0, $joinTable = null, $joinCondition = null, $joinType = 'inner', $select = null, $group_by = null, $return=0, $like_arr=array())
