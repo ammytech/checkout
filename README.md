@@ -11,3 +11,7 @@
 	192.168.99.100	shopcart.local.api
 	192.168.99.100	shopcart.local.backend
 	192.168.99.100  shopcart.local.assets
+	
+5 Doc link:
+
+https://docs.google.com/document/d/1fCcWq065AGmNlUWzc32ALw3iKWZEj4-788yHgBPUurw/edit#
