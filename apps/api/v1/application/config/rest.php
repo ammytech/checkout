@@ -603,3 +603,6 @@ $config['allow_any_cors_domain'] = FALSE;
 |
 */
 $config['allowed_cors_origins'] = [];
+$config['allowed_controller_methods'] = [
+    'order' => ['index_get']
+];

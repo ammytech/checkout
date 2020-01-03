@@ -733,6 +733,20 @@ abstract class REST_Controller extends \CI_Controller {
             $this->_log_request($authorized = TRUE);
         }
 
+        //Check thet method exist to serve the request
+        $allowedMethods = $this->config->item('allowed_controller_methods');
+        if(!empty($this->router->class)){
+            if (key_exists($this->router->class, $allowedMethods)){
+                if(!in_array($controller_method, $allowedMethods[$this->router->class])){
+                    $response = [$this->config->item('rest_status_field_name') => FALSE, $this->config->item('rest_message_field_name') => $this->lang->line('text_rest_unknown_method')];
+                    return $this->response($response, self::HTTP_NOT_IMPLEMENTED); 
+                } 
+            } else {
+                $response = [$this->config->item('rest_status_field_name') => FALSE, $this->config->item('rest_message_field_name') => $this->lang->line('text_rest_unknown_controller')];
+                return $this->response($response, self::HTTP_BAD_REQUEST); 
+            }
+        }
+        
         // Call the controller method and passed arguments
         try
         {
