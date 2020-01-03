@@ -84,9 +84,22 @@ class Pojo_Model extends CI_Model
      *
      * @usage : $this->pojo_model->updatePojos('db-name','table-name',$where,$data,$limit,$order_col,$order);
      */
-    public function updatePojos($dbName, $table, $where, $data, $limit=0, $order_col='', $order = 'asc')
+    public function updatePojos($queryData)
     {
         try {
+             
+            $dbName = $this->writeDb1;
+            $table = null ;
+            $order = 'asc';
+            $where = $data = [];
+            $limit = 0;
+            $order_col = '';
+            
+            if (is_array($queryData)) {
+                foreach ($queryData as $key => $val) {
+                    $$key = $val;
+                }
+            }
             $db = $this->shard->get_Generic_Db($dbName);
             $db->where($where);
             if ($order_col!='') {
@@ -390,9 +403,20 @@ class Pojo_Model extends CI_Model
         return $query->row();
     }
 
-    public function getPojos($dbName, $sql, $table, $paramArr=null, $sortcol = null, $offset = 0, $limit = 0, $select = null, $group_by = null, $return = 0, $order='asc', $cache=false, $paramArr_in=null, $like_arr=array())
+    public function getPojos($qyeryData)
     {
         try {
+            $dbName = $this->readDb1;
+            $select = $sortcol = $group_by = $table = $sql = null ;
+            $order = 'asc';
+            $offset = $limit = $return =0;
+            $paramArr_in = $paramArr = $like_arr = [];
+            
+            if (is_array($qyeryData)) {
+                foreach ($qyeryData as $key => $val) {
+                    $$key = $val;
+                }
+            }
             $this->db = $this->shard->get_Generic_Db($dbName, true);
             
             if ($select != null) {

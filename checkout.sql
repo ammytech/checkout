@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Jan 03, 2020 at 04:48 AM
+-- Generation Time: Jan 03, 2020 at 03:37 PM
 -- Server version: 5.7.28
 -- PHP Version: 7.4.1
 
@@ -25,6 +25,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `backend_logs`
+--
+
+CREATE TABLE `backend_logs` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `uid` int(11) NOT NULL,
+  `description` text,
+  `ip_address` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `backend_logs`
+--
+
+INSERT INTO `backend_logs` (`id`, `name`, `uid`, `description`, `ip_address`) VALUES
+(1, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 20:59:45\",\"table_name\":\"backend_users\"}', '3232260865'),
+(2, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:00:15\",\"table_name\":\"backend_users\"}', '3232260865'),
+(3, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:00:37\",\"table_name\":\"backend_users\"}', '3232260865'),
+(4, '', 0, '{\"username\":\"amir\",\"password\":\"470d1ee40a8f7af398de717c8c0c5ff7\",\"createdAt\":\"2020-01-03 21:01:30\",\"table_name\":\"backend_users\"}', '3232260865'),
+(5, '', 0, '{\"username\":\"amir\",\"password\":\"470d1ee40a8f7af398de717c8c0c5ff7\",\"createdAt\":\"2020-01-03 21:01:46\",\"table_name\":\"backend_users\"}', '3232260865'),
+(6, '', 0, '{\"username\":\"amir\",\"password\":\"470d1ee40a8f7af398de717c8c0c5ff7\",\"createdAt\":\"2020-01-03 21:02:16\",\"table_name\":\"backend_users\"}', '3232260865'),
+(7, '', 0, '{\"username\":\"amir\",\"password\":\"470d1ee40a8f7af398de717c8c0c5ff7\",\"createdAt\":\"2020-01-03 21:02:29\",\"table_name\":\"backend_users\"}', '3232260865'),
+(8, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:02:46\",\"table_name\":\"backend_users\"}', '3232260865'),
+(9, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:04:04\",\"table_name\":\"backend_users\"}', '3232260865'),
+(10, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:05:30\",\"table_name\":\"backend_users\"}', '3232260865');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `category`
 --
 
@@ -35,6 +65,16 @@ CREATE TABLE `category` (
   `updatedAt` timestamp NULL DEFAULT NULL,
   `status` enum('0','1','2') NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `name`, `createdAt`, `updatedAt`, `status`) VALUES
+(1, 'posters', '2020-01-03 12:01:14', '2020-01-03 17:38:25', '1'),
+(2, 'photo book', '2020-01-03 12:01:49', '2020-01-03 17:37:39', '1'),
+(3, 'calendar', '2020-01-03 12:07:27', NULL, '1'),
+(4, 'wedding', '2020-01-03 12:09:12', NULL, '1');
 
 -- --------------------------------------------------------
 
@@ -119,6 +159,13 @@ CREATE TABLE `users` (
   `isActive` enum('0','1') NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `mobile`, `address`, `username`, `email`, `password`, `lastLogin`, `status`, `userTypeId`, `createdAt`, `ipAddress`, `updatedAt`, `isActive`) VALUES
+(1, 'Amir', '9833281227', 'Antop Hill Wadala', 'amir', 'infoamir225@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-03 21:05:30', '1', 1, '2020-01-03 17:48:00', 0, NULL, '1');
+
 -- --------------------------------------------------------
 
 --
@@ -141,6 +188,12 @@ INSERT INTO `user_roles` (`id`, `roleType`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `backend_logs`
+--
+ALTER TABLE `backend_logs`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `category`
@@ -186,10 +239,16 @@ ALTER TABLE `user_roles`
 --
 
 --
+-- AUTO_INCREMENT for table `backend_logs`
+--
+ALTER TABLE `backend_logs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -213,7 +272,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user_roles`

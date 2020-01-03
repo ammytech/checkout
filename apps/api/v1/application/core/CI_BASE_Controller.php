@@ -25,6 +25,10 @@ class CI_BASE_Controller extends REST_Controller
     public $http_stat = 200;
     public $cache_met = '';
     public $api_source_arr = array('android','ios','web');
+    public $AccesUser = ['1'];
+    public $tableNames = [];
+    public $userName = '';
+    public $userId = '';
 
     public function __construct()
     {
@@ -173,6 +177,16 @@ class CI_BASE_Controller extends REST_Controller
         if ($this->response_code === RES_INVSRC) {
             return $this->returnError(INVALID_API_SOURCE_KEY);
         }
+        
+    }
+    public function logIt($data = [], $tablename='')
+    {
+        $otherDetails = ['table_name' => $tablename];
+        $log_data = ['name' => $this->userName,
+            'uid' => $this->userId,
+            'description' => json_encode($data + $otherDetails),
+            'ip_address' => ip2long($this->input->ip_address())];
+        return $this->pojo->insertPojoReturnId($this->pojo->writeDb1, 'backend_logs', $log_data);
         
     }
 }
