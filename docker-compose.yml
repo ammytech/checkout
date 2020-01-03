@@ -1,0 +1,41 @@
+version: '3'
+ 
+services:
+    php:
+        build: ./php/
+        volumes:
+            - C:\Users\checkout\apps:/apps
+    nginx:
+        build: ./nginx/
+        ports:
+            - "8080:80"
+        volumes:
+            - C:\Users\checkout\apps:/apps
+        privileged: true
+        links:
+            - php
+    mysql:
+      image: mysql:5.7
+      ports:
+        - 3306:3306
+      depends_on:
+        - php
+      environment:
+        MYSQL_ROOT_PASSWORD: shoppingcart3214
+        MYSQL_DATABASE: shoppingcart
+        MYSQL_USER: amir
+        MYSQL_PASSWORD: a123456
+
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      restart: always
+      ports:
+        - 8090:80
+      links:
+        - php:7.2-fpm
+        - mysql
+      environment:
+        MYSQL_USERNAME: root
+        MYSQL_ROOT_PASSWORD: shoppingcart3214
+        PMA_HOST: mysql
+        PMA_ARBITRARY: 1
