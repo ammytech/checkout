@@ -1,4 +1,4 @@
-1 change volumes path of source from "D:\shoppingcart\codeapp" to yout local codeapp path
+1 change volumes path of source from "D:\shoppingcart\apps" to yout local apps path
 
 2 change fastcgi_param as production in .conf file of nginx, default it is given as development
 
