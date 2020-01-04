@@ -26,7 +26,7 @@ class UserModel extends CI_BASE_Model
         
         return $result;
     }
-    public function updateUser($userResult){
+    public function updateUserLastLogin($userResult){
         if(empty($userResult['id'])){
             
           return false;  

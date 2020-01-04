@@ -1,25 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+/**
+ *
+ * @package		CodeIgniter
+ * @subpackage	Rest Server
+ * @category	Controller
+ * @author		Amirullah Khan
+ * @link		''
+ */
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('welcome_message');
-	}
+// This can be removed if you use __autoload() in config.php OR use Modular Extensions
+
+class Welcome extends CI_BASE_Controller
+{
+    public function __construct()
+    {
+        // Call the Controller constructor
+        parent::__construct();
+    }
+    
+    
+    public function index()
+    {
+        $this->load->view('welcome_message');
+    }
 }

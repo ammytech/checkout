@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Jan 03, 2020 at 03:37 PM
+-- Generation Time: Jan 04, 2020 at 09:08 AM
 -- Server version: 5.7.28
 -- PHP Version: 7.4.1
 
@@ -50,7 +50,60 @@ INSERT INTO `backend_logs` (`id`, `name`, `uid`, `description`, `ip_address`) VA
 (7, '', 0, '{\"username\":\"amir\",\"password\":\"470d1ee40a8f7af398de717c8c0c5ff7\",\"createdAt\":\"2020-01-03 21:02:29\",\"table_name\":\"backend_users\"}', '3232260865'),
 (8, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:02:46\",\"table_name\":\"backend_users\"}', '3232260865'),
 (9, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:04:04\",\"table_name\":\"backend_users\"}', '3232260865'),
-(10, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:05:30\",\"table_name\":\"backend_users\"}', '3232260865');
+(10, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:05:30\",\"table_name\":\"backend_users\"}', '3232260865'),
+(11, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:15:08\",\"table_name\":\"backend_users\"}', '3232260865'),
+(12, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:37:28\",\"table_name\":\"backend_users\"}', '3232260865'),
+(13, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:38:32\",\"table_name\":\"backend_users\"}', '3232260865'),
+(14, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:39:22\",\"table_name\":\"backend_users\"}', '3232260865'),
+(15, 'Amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-03 21:40:02\",\"table_name\":\"backend_users\"}', '3232260865'),
+(16, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 01:27:36\",\"table_name\":\"backend_users\"}', '3232260865'),
+(17, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:06:13\",\"table_name\":\"backend_users\"}', '2886991873'),
+(18, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:06:50\",\"table_name\":\"backend_users\"}', '2886991873'),
+(19, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:07:19\",\"table_name\":\"backend_users\"}', '2886991873'),
+(20, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:11:41\",\"table_name\":\"backend_users\"}', '3232260865'),
+(21, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:11:52\",\"table_name\":\"backend_users\"}', '2886991873'),
+(22, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:12:25\",\"table_name\":\"backend_users\"}', '2886991873'),
+(23, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:13:14\",\"table_name\":\"backend_users\"}', '2886991873'),
+(24, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:13:39\",\"table_name\":\"backend_users\"}', '2886991873'),
+(25, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:15:02\",\"table_name\":\"backend_users\"}', '2886991873'),
+(26, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:15:37\",\"table_name\":\"backend_users\"}', '2886991873'),
+(27, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:16:26\",\"table_name\":\"backend_users\"}', '2886991873'),
+(28, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:17:04\",\"table_name\":\"backend_users\"}', '2886991873'),
+(29, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:17:19\",\"table_name\":\"backend_users\"}', '2886991873'),
+(30, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:19:51\",\"table_name\":\"backend_users\"}', '2886991873'),
+(31, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:20:24\",\"table_name\":\"backend_users\"}', '2886991873'),
+(32, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:21:42\",\"table_name\":\"backend_users\"}', '2886991873'),
+(33, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:22:01\",\"table_name\":\"backend_users\"}', '2886991873'),
+(34, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:22:25\",\"table_name\":\"backend_users\"}', '2886991873'),
+(35, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:25:59\",\"table_name\":\"backend_users\"}', '2886991873'),
+(36, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:26:30\",\"table_name\":\"backend_users\"}', '2886991873'),
+(37, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:27:07\",\"table_name\":\"backend_users\"}', '2886991873'),
+(38, '', 0, '{\"username\":\"amir\",\"password\":\"470d1ee40a8f7af398de717c8c0c5ff7\",\"createdAt\":\"2020-01-04 02:29:34\",\"table_name\":\"backend_users\"}', '2886991873'),
+(39, '', 0, '{\"username\":\"amir\",\"password\":\"470d1ee40a8f7af398de717c8c0c5ff7\",\"createdAt\":\"2020-01-04 02:29:54\",\"table_name\":\"backend_users\"}', '2886991873'),
+(40, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:30:05\",\"table_name\":\"backend_users\"}', '2886991873'),
+(41, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:38:36\",\"table_name\":\"backend_users\"}', '2886991873'),
+(42, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:39:11\",\"table_name\":\"backend_users\"}', '2886991873'),
+(43, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:39:58\",\"table_name\":\"backend_users\"}', '2886991873'),
+(44, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:40:35\",\"table_name\":\"backend_users\"}', '2886991873'),
+(45, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:40:51\",\"table_name\":\"backend_users\"}', '2886991873'),
+(46, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 02:41:36\",\"table_name\":\"backend_users\"}', '2886991873'),
+(47, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 03:11:06\",\"table_name\":\"backend_users\"}', '2886991873'),
+(48, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 03:11:29\",\"table_name\":\"backend_users\"}', '2886991873'),
+(49, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 03:14:19\",\"table_name\":\"backend_users\"}', '3232260865'),
+(50, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 11:11:13\",\"table_name\":\"backend_users\"}', '2886991873'),
+(51, 'Amir', 1, '{\"status\":\"0\",\"table_name\":\"category\"}', '3232260865'),
+(52, 'Amir', 1, '{\"status\":\"1\",\"table_name\":\"category\"}', '3232260865'),
+(53, 'Amir', 1, '{\"status\":\"0\",\"table_name\":\"category\"}', '3232260865'),
+(54, 'Amir', 1, '{\"status\":\"1\",\"table_name\":\"category\"}', '3232260865'),
+(55, 'Amir', 1, '{\"name\":\"testing1\",\"updatedAt\":\"2020-01-04 13:51:58\",\"table_name\":\"category\"}', '3232260865'),
+(56, 'Amir', 1, '{\"status\":\"0\",\"table_name\":\"category\"}', '3232260865'),
+(57, 'Amir', 1, '{\"status\":\"1\",\"table_name\":\"category\"}', '3232260865'),
+(58, 'Amir', 1, '{\"name\":\"testing22\",\"updatedAt\":\"2020-01-04 13:52:30\",\"table_name\":\"category\"}', '3232260865'),
+(59, 'Amir', 1, '{\"img\":\"2020\\/01\\/greeting-card_500x400.jpg\",\"title\":\"new year greeting cards 2020\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 2020\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-04 14:01:10\",\"table_name\":\"product\"}', '3232260865'),
+(60, 'Amir', 1, '{\"img\":\"2020\\/01\\/greeting-card_500x400.jpg\",\"title\":\"new year greeting cards 20201\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 20201\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-04 14:01:40\",\"table_name\":\"product\"}', '3232260865'),
+(61, 'Amir', 1, '{\"img\":\"2020\\/01\\/greeting-card_500x400.jpg\",\"title\":\"new year greeting cards 2020\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 2020\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-04 14:01:45\",\"table_name\":\"product\"}', '3232260865'),
+(62, 'Amir', 1, '{\"status\":\"1\",\"table_name\":\"product\"}', '3232260865'),
+(63, 'Amir', 1, '{\"img\":\"2020\\/01\\/greeting-card_500x400.jpg\",\"title\":\"new year greeting cards 2020\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 2020\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-04 14:01:54\",\"table_name\":\"product\"}', '3232260865');
 
 -- --------------------------------------------------------
 
@@ -74,7 +127,9 @@ INSERT INTO `category` (`id`, `name`, `createdAt`, `updatedAt`, `status`) VALUES
 (1, 'posters', '2020-01-03 12:01:14', '2020-01-03 17:38:25', '1'),
 (2, 'photo book', '2020-01-03 12:01:49', '2020-01-03 17:37:39', '1'),
 (3, 'calendar', '2020-01-03 12:07:27', NULL, '1'),
-(4, 'wedding', '2020-01-03 12:09:12', NULL, '1');
+(4, 'wedding', '2020-01-03 12:09:12', NULL, '1'),
+(5, 'testing1', '2020-01-04 07:05:09', '2020-01-04 13:51:58', '1'),
+(6, 'testing22', '2020-01-04 08:22:16', '2020-01-04 13:52:30', '1');
 
 -- --------------------------------------------------------
 
@@ -117,6 +172,7 @@ CREATE TABLE `product` (
   `summary` varchar(500) DEFAULT NULL,
   `description` text,
   `price` double(12,2) DEFAULT NULL,
+  `price_rules` varchar(300) DEFAULT NULL,
   `img` varchar(150) DEFAULT NULL,
   `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` timestamp NULL DEFAULT NULL,
@@ -124,6 +180,13 @@ CREATE TABLE `product` (
   `createdBy` int(10) UNSIGNED NOT NULL,
   `updatedBy` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `title`, `slug`, `summary`, `description`, `price`, `price_rules`, `img`, `createdAt`, `updatedAt`, `status`, `createdBy`, `updatedBy`) VALUES
+(1, 'new year greeting cards 2020', 'new-year-greeting-cards-2020', 'new year greeting cards 2020', '<p>new year greeting cards 2020</p>', 22.00, NULL, '2020/01/greeting-card_500x400.jpg', '2020-01-04 13:01:36', '2020-01-04 14:01:54', '1', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -135,6 +198,13 @@ CREATE TABLE `product_category` (
   `productId` int(10) UNSIGNED NOT NULL,
   `categoryId` smallint(5) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `product_category`
+--
+
+INSERT INTO `product_category` (`productId`, `categoryId`) VALUES
+(1, 5);
 
 -- --------------------------------------------------------
 
@@ -164,7 +234,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `mobile`, `address`, `username`, `email`, `password`, `lastLogin`, `status`, `userTypeId`, `createdAt`, `ipAddress`, `updatedAt`, `isActive`) VALUES
-(1, 'Amir', '9833281227', 'Antop Hill Wadala', 'amir', 'infoamir225@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-03 21:05:30', '1', 1, '2020-01-03 17:48:00', 0, NULL, '1');
+(1, 'Amir', '9833281227', 'Antop Hill Wadala', 'amir', 'infoamir225@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-04 11:11:13', '1', 1, '2020-01-03 17:48:00', 0, NULL, '1');
 
 -- --------------------------------------------------------
 
@@ -242,13 +312,13 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `backend_logs`
 --
 ALTER TABLE `backend_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -266,7 +336,7 @@ ALTER TABLE `order_detail`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`

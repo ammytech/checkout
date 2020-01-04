@@ -83,7 +83,7 @@ class Login extends CI_BASE_Controller
             
             $this->userName = $resultUser['username'];
             $this->userId = $resultUser['id'];
-            $this->UserModel->updateUser($resultUser);
+            $this->UserModel->updateUserLastLogin($resultUser);
             $this->logIt($inputArr + $created, 'backend_users');
             
             return true;
@@ -94,7 +94,7 @@ class Login extends CI_BASE_Controller
                 $message = 'Invalid username or password';
             }
             $this->form_validation->set_message('auth_user', $message);
-            $this->loggedit($inputArr+$created, 'backend_users');
+            $this->logIt($inputArr+$created, 'backend_users');
             
             return false;
         }
