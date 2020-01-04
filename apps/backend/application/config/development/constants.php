@@ -97,13 +97,14 @@ define("LOCAL_PATH", "/");
 define("FILE_PATH", DOMAIN_HOST.LOCAL_PATH);
 define("DOMAIN_PATH", DOMAIN_HOST.LOCAL_PATH);
 define("ASSET_PATH", FILE_PATH . 'assets/');
-define('ADMIN_THEME1', ASSET_PATH.'admin/theme1/');
+define("ASSETS_URL" , "http://shopcart.local.assets:8080/");
+define('ADMIN_THEME1', ASSETS_URL.'backend/admin/theme1/');
 define("BACKEND_CACHE_PATH", FILE_PATH."application/cache");
 define("FRONT_CACHE_PATH", FILE_PATH."application/cache");
-define('IMG_ABS_PATH', '/apps/frontend/product-images/');
+define('IMG_ABS_PATH', '/apps/frontend/assets/product-images/');
 define("PRODUCT_IMG_ABS_PATH", IMG_ABS_PATH."media/product/");
-define("ASSETS_URL" , "http://shopcart.local.assets:8080/");
-define("PRODUCT_IMG_PATH", ASSETS_URL."media/product/");
+
+define("PRODUCT_IMG_PATH", ASSETS_URL."product-images/media/product/");
 
 
 defined('RES_UNAUT')      OR define("RES_UNAUT", "1");
