@@ -28,7 +28,7 @@ class Product extends CI_BASE_Controller
 
         if (! $total_rows = $this->cache->get($this->cache_key)) {
             $total_rows =  $this->Product->getProductCount();
-            if (!empty($total_rows['error'])){
+            if (empty($total_rows['error'])){
                 $this->cache->save($this->cache_key, $total_rows, 24*60*60);
             }
         }

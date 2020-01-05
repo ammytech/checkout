@@ -99,8 +99,10 @@ define("DOMAIN_PATH", DOMAIN_HOST.LOCAL_PATH);
 define("ASSET_PATH", FILE_PATH . 'assets/');
 define("ASSETS_URL" , "http://shopcart.local.assets:8080/");
 define('ADMIN_THEME1', ASSETS_URL.'backend/admin/theme1/');
-define("BACKEND_CACHE_PATH", FILE_PATH."application/cache");
-define("FRONT_CACHE_PATH", FILE_PATH."application/cache");
+define("DEVELOP_PATH", $_SERVER['DOCUMENT_ROOT']."/");
+define("DEVELOP_PATH_FRONT", '/apps/frontend/');
+define("BACKEND_CACHE_PATH", DEVELOP_PATH."application/cache");
+define("FRONT_CACHE_PATH", DEVELOP_PATH_FRONT."application/cache");
 define('IMG_ABS_PATH', '/apps/frontend/assets/product-images/');
 define("PRODUCT_IMG_ABS_PATH", IMG_ABS_PATH."media/product/");
 
