@@ -48,5 +48,10 @@ https://docs.google.com/document/d/1fCcWq065AGmNlUWzc32ALw3iKWZEj4-788yHgBPUurw/
     'password' => 'shoopingcart3214',
     'database' => 'checkout',
 	
+7. To clear query data cache follow 2 steps
+		1. Frontend: /apps/frontend/application/cache/ /apps/backend/application/cache/ delete all the cache files in it
+		2. Use Backend menu in Account, Clear Cache
+			
+	
 	
 	
