@@ -15,7 +15,7 @@ class Orders extends CI_BASE_Controller
     {
         $this->data['title'] = getSiteTitle($this->router->class);
         $source = 'web';
-        $query_str ='orders';
+        $query_str ='order';
         $num = '20';
         $page = '1';
         $fields = ['api_source' => urlencode($source),

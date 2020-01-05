@@ -14,13 +14,7 @@ include 'header.php';?>
       <h1 ><?php echo ucfirst($this->router->class);?></h1>
        </div>
        <div class="actions float-right">
-      
-    
-                                 
-							
-								
-								
-								
+					
 		</div>
 		<div class="clear"></div>
 	  
@@ -45,11 +39,11 @@ include 'header.php';?>
                 ?>
             
             <tr>
-                <td><?php echo $row['oid']?></td>
+                <td><?php echo $row['orderId']?></td>
                 <td><?php echo '<br><h4>'.$row['title'].'</h4>'; ?> </td>
                 <td><?php echo $row['quantity']?></td>
                 <td><?php echo $row['price']?></td>
-                <td><?php echo $row['created_at']?></td>
+                <td><?php echo $row['createdAt']?></td>
                
             </tr>
             <?php 
