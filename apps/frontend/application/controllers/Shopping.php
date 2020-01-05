@@ -126,7 +126,41 @@ class Shopping extends CI_BASE_Controller
                 
                 return $this->retResponse($data, $this->http_stat);
             }
-            
+            $order = [
+                'userId' => $this->userId
+            ];
+
+            $ord_id =  $this->pojo->insertPojoReturnId($this->pojo->writeDb1, 'orders', $order);
+           
+            if ($cart = $this->cart->contents()):
+            foreach ($cart as $item) :
+                    $order_detail[] = [
+                        'orderId' => $ord_id,
+                        'productId' => $item['id'],
+                        'quantity' => $item['qty'],
+                        'price' => $item['price']
+                    ];
+
+            // Insert product imformation with order detail, store in cart also store in database.
+            endforeach;
+            endif;
+            $this->pojo->insertPojos($this->pojo->writeDb1, 'order_detail', $order_detail);
+            $this->cart->destroy();
+            //send email
+            $data = $this->commit_rollback($data);
+            if ($data['status'] == '1') {
+                $inputArr  = ['id'=>$this->userId];
+                $created = ['createdAt' => date('Y-m-d H:i:s')];
+                $resultUser = $this->User->getUser($inputArr);
+                $email_data = array('name'=>$resultUser['name']);
+                sitemail('thank_you', $resultUser['email'], '', '', '', " Customer Order", 'Customer Team', $email_data);
+            }
+            return $this->retResponse($data, $this->http_stat);
         }
+    }
+    public function thankyou()
+    {
+        $this->data['title'] = getSiteTitle($this->router->class);
+        $this->load->view('thankyou', $this->data);
     }
 }

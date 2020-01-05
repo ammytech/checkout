@@ -155,7 +155,7 @@ jQuery("#userLogin").submit(function(){
 		dataType: "json",
 		timeout: 30000,
 		error: function (xhr, err) {
-		
+		showErrorAjax(xhr, err);
 		},
 		success: function(data) {
 		

@@ -18,5 +18,9 @@ class Home extends CI_BASE_Controller
         $this->data['products'] = $this->getProducts();
         $this->load->view('home', $this->data);
     }
+    public function logout()
+    {
+        $this->logout_user();
+    }
 
 }

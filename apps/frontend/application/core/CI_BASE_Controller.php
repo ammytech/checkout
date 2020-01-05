@@ -31,8 +31,8 @@ class CI_BASE_Controller extends CI_Controller
         parent::__construct();
         $this->load->library('session');
         $this->load->helper('cfunctions');
-        
-        $this->load->driver('cache', array('adapter' => 'file'));
+        $this->sec_array = $this->config->item('header_keys');
+        $this->load->driver('cache', ['adapter' => 'file']);
         $this->userdata = $this->session->userdata($this->session_name_site);
         $this->sessionid = $this->session->userdata('session_id');
         $this->userId = (isset($this->userdata['uid'])?$this->userdata['uid']:0);
@@ -51,6 +51,7 @@ class CI_BASE_Controller extends CI_Controller
         $this->lang->load('site', $language, FALSE, TRUE, __DIR__."/../");
         $this->load->library('cart');
         $this->cart_details();
+        $this->load->model('UserModel', 'User');
       
     }
     public function getProducts()
@@ -94,7 +95,7 @@ class CI_BASE_Controller extends CI_Controller
         }
     }
   
-    public function commit_rollback($data=array())
+    public function commit_rollback($data = [])
     {
         if ($this->pojo->trans_status() === false) {
             //if something went wrong, rollback everything
@@ -109,5 +110,81 @@ class CI_BASE_Controller extends CI_Controller
             //return TRUE;
         }
         return $data;
+    }
+    public function hashPassword($password)
+    {
+        $this->load->helper('security');
+        return  do_hash($password, 'md5'); // MD5
+    }
+    public function callApi($query_str, $source, $f_str, $count, $method='post')
+    {
+        $sec_key = (!empty($this->sec_array[$source]) ? $this->sec_array[$source] : '');
+       
+        $ch = curl_init();
+        if ($method =='get' && !empty($f_str)) {
+            $query_str =$query_str.'?'.$f_str;
+        }
+        $headers = [];
+        $headers[] = 'Secretkey:' . $sec_key;
+        $apiHost = $this->config->item('API_HOST');
+        curl_setopt($ch, CURLOPT_URL, $apiHost . $query_str);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        if ($method == 'post') {
+            curl_setopt($ch, CURLOPT_POST, $count);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $f_str);
+        }
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        
+        $server_output = curl_exec($ch);
+        //var_dump(curl_getinfo($ch));exit;
+        curl_close($ch);
+        return $server_output ;
+    }
+    public function setUserSess($uid, $name)
+    {
+        // add all data to session
+        $userdata = [
+            'uid' => $uid,
+            'name' => $name,
+            'user_logged_in' => true
+        ];
+        // print_r($userdata);exit;
+        setSiteSess($userdata, $this->session_name_site);
+    }
+    public function setHTTPStatus($statusCode)
+    {
+        switch ($statusCode) {
+            
+            case HTTP_BAD_REQUEST:
+                $this->http_stat = HTTP_BAD_REQUEST;
+                break;
+            case RES_UNAUT:
+                $this->http_stat = RES_UNAUT_CODE;
+                break;
+            default:
+                
+                $this->http_stat = RES_UKERR;
+                break;
+        }
+       
+    }
+    
+    public function logout_user($redirect=true)
+    {
+        if ($this->userId) {
+            $inputData =  ['id' => $this->userId];
+            $response = $this->User->userInActive($inputData);
+            if (empty($response['error'])) {
+                $this->session->sess_destroy();
+            }  else {
+                $data['message'] = $this->lang->line('text_something_went_wrong');
+                $data['status'] = '0';
+                return $this->retResponse($data, $this->http_stat);
+            }
+        }
+        if ($redirect) {
+            
+            redirect(frontend_base_url);
+        }
     }
 }

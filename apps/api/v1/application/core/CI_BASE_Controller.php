@@ -25,7 +25,7 @@ class CI_BASE_Controller extends REST_Controller
     public $http_stat = 200;
     public $cache_met = '';
     public $api_source_arr = array('android','ios','web');
-    public $AccesUser = ['1'];
+    public $AccesUser = ['1', '2'];
     public $tableNames = [];
     public $userName = '';
     public $userId = '';

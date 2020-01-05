@@ -526,3 +526,4 @@ $config['API_HOST'] = 'http://192.168.99.100:8080/v1/';
 
 $config['site_language'] = ['default' =>'english']; // different language can be added in future, it can be kept in array
 
+$config['header_keys'] = ['web' => 'asasg@#$$hsghs', 'ios' => 'ioshghgh@#$gg'];

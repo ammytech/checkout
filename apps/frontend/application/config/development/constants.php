@@ -110,3 +110,14 @@ defined('HTTP_BAD_REQUEST')      OR define('HTTP_BAD_REQUEST', 400);
 defined('HTTP_METHOD_NOT_ALLOWED')      OR define('HTTP_METHOD_NOT_ALLOWED', 405); 
 defined('HTTP_INTERNAL_SERVER_ERROR')      OR define('HTTP_INTERNAL_SERVER_ERROR', 500); 
 
+defined('RES_UNAUT')      OR define("RES_UNAUT", "1");
+defined('RES_INVJSON')      OR define("RES_INVJSON", "5");
+defined('RES_UKERR')      OR define("RES_UKERR", "520");
+defined('SER_ERR_RES')      OR define("SER_ERR_RES", "7");
+defined('RES_Forbid')      OR define("RES_Forbid", "8");
+defined('TECHNICAL_ERROR')      OR define("TECHNICAL_ERROR", "500");
+defined('HTTP_BAD_REQUEST') OR  define("HTTP_BAD_REQUEST", "400");
+
+defined('RES_UNAUT_CODE')      OR define("RES_UNAUT_CODE", "401");
+defined('RES_BAD_REQUEST_CODE')      OR define("RES_BAD_REQUEST_CODE", "401");
+

@@ -39,19 +39,20 @@ if (! function_exists('setSiteCookie')) {
 }
 
 if (! function_exists('setSiteSess')) {
-    function setSiteSess($sess_data = array(), $session_name = 'site_backend_user')
+    function setSiteSess($sess_data = [], $session_name = 'site_frontent_user')
     {
         $CI = & get_instance();
-        $userdata = array();
+        $userdata = [];
 
         foreach ($sess_data as $key => $rows) {
             if (is_array($key)) {
             } else {
-                $userdata [$session_name] = $rows;
+                $userdata [$session_name][$key] = $rows;
             }
         }
-        // print_r($userdata);exit;
+        
         $CI->session->set_userdata($userdata);
+        
         return true;
     }
 }
@@ -120,6 +121,53 @@ if (! function_exists('isJson')) {
     }
 }
 
+if (! function_exists('sitemail')) {
+    function sitemail($view_name='', $to='', $from='', $cc='', $bcc='', $subject = "", $sendername = 'Custom Team', $email_data = array())
+    {
+        if (trim($to)=='') {
+            return false;
+        }
+        if (trim($from)=='') {
+            $from = 'infoamir225@gmail.com';
+        }
+        $CI = & get_instance();
+        
+        $message = $CI->load->view('../views/mail/'.$view_name.'', $email_data, true);
+        $config = array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'ssl://smtp.googlemail.com',
+            'smtp_port' => '465',
+            'smtp_user' => '', // username
+            'smtp_pass' => '', // password
+            'mailtype'  => 'html',
+            'charset'   => 'iso-8859-1'
+        );
+        /*
+         $config = Array(
+         'mailtype'  => 'html',
+         'charset'   => 'iso-8859-1'
+         );
+         */
+        $CI->load->library('email', $config);
+        $CI->email->set_newline("\r\n");
+        //$CI->email->initialize($config);
+        $CI->email->from($from, $sendername);
+        $CI->email->to($to);
+        if (trim($cc) != '') {
+            $CI->email->cc($cc);
+        }
+        if (trim($bcc) != '') {
+            $CI->email->bcc($bcc);
+        }
+        
+        $CI->email->subject($subject);
+        $CI->email->message($message);
+        //$CI->email->set_newline("\r\n");
+        return ($CI->email->send()?true:false);
+        //$CI->email->send();
+        //echo $CI->email->print_debugger();exit;
+    }
+}
 
 
 /* End of file cfunctions_helper.php */
