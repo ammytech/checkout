@@ -111,7 +111,7 @@
                 </div> 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?php echo frontend_base_url?>">Home</a></li>
+                        <li class="active"><a href="/">Home</a></li>
                         <li><a href="<?php echo frontend_base_url?>shopping/cart">Cart</a></li>
                         <li><a href="<?php echo frontend_base_url?>shopping/checkout">Checkout</a></li>
                       

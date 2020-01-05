@@ -107,7 +107,7 @@ var clicked = '';
 		dataType: "json",
 		timeout: 30000,
 		error: function (xhr, err) {
-		
+		showErrorAjax(xhr, err);
 		},
 		success: function(data) {
 		
@@ -141,7 +141,7 @@ var clicked = '';
 		dataType: "json",
 		timeout: 30000,
 		error: function (xhr, err) {
-		
+		showErrorAjax(xhr, err);
 		},
 		success: function(data) {
 		
@@ -175,7 +175,7 @@ var clicked = '';
 		dataType: "json",
 		timeout: 30000,
 		error: function (xhr, err) {
-		
+		    showErrorAjax(xhr, err);
 		},
 		success: function(data) {
 		
@@ -255,6 +255,30 @@ function rTrim(str)
 function Trimnew(str){
 	var data = rTrim(lTrim(str));
 	return data;
+}
+function showErrorAjax(jqXHR,exception){
+	var msg = '';
+	if (jqXHR.status === 0) {
+		msg = 'Not connect.\n Verify Network.';
+	} else if (jqXHR.status == 400) {
+		msg = 'Bad Request. [400]';
+	} else if (jqXHR.status == 404) {
+			msg = 'Requested page not found. [404]';
+	} else if (jqXHR.status == 500) {
+			msg = 'Internal Server Error [500].';
+	} else if (exception === 'parsererror') {
+			msg = 'Requested JSON parse eror';
+	} else if (exception === 'timeout') {
+			msg = 'Time out';
+	} else if (exception === 'abort') {
+			msg = 'request aborted';
+	} else {
+			msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	}
+	$("div#spinner").fadeOut("fast");
+	$("div#spinner2").fadeOut("fast");
+	$(".loader").hide();
+	alert(msg+", try again");
 }
 
 

@@ -18,17 +18,5 @@ class Home extends CI_BASE_Controller
         $this->data['products'] = $this->getProducts();
         $this->load->view('home', $this->data);
     }
-    public function getProducts()
-    {
-        $cacheName = $this->productListCacheName;
-        if (! $productList = $this->cache->get($cacheName)) {
-            $param_in = [];
-            $inputData = ['status' => 1];
-            $productList = $this->Product->getProductList($inputData);
-            if (empty($productList['error'])) {
-                $this->cache->save($cacheName, $productList, $this->defaultCacheTime);
-            }
-        }
-        return $productList;
-    }
+
 }

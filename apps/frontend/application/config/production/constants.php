@@ -104,3 +104,9 @@ define("PRODUCT_IMG_PATH", ASSETS_URL."product-images/media/product/");
 define("frontend_base_url" , "http://shopcart.local:8080/");
 
 
+//HTTP Status
+
+defined('HTTP_OK')      OR define('HTTP_OK', 200);
+defined('HTTP_BAD_REQUEST')      OR define('HTTP_BAD_REQUEST', 400);
+defined('HTTP_METHOD_NOT_ALLOWED')      OR define('HTTP_METHOD_NOT_ALLOWED', 405);
+defined('HTTP_INTERNAL_SERVER_ERROR')      OR define('HTTP_INTERNAL_SERVER_ERROR', 500);

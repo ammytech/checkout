@@ -24,6 +24,7 @@ class CI_BASE_Controller extends CI_Controller
     public $defaultCacheTime = 24*60*60;
     public $productListCacheName = 'product_list';
     public $discount_rate = (120/100);
+    public $http_stat = HTTP_OK;
     
     public function __construct()
     {
@@ -41,10 +42,57 @@ class CI_BASE_Controller extends CI_Controller
         $this->uname = $this->userName;
         $segment_uri = current_url();
         $this->currency_code = $this->currency_code[1];
-
+        $language = $this->config->item('site_language');
+        if (empty($language) )
+        {
+            $language = 'english';
+        }
+        $language = $language['default']; // this will be change as per multilingual site in future
+        $this->lang->load('site', $language, FALSE, TRUE, __DIR__."/../");
+        $this->load->library('cart');
+        $this->cart_details();
       
     }
-
+    public function getProducts()
+    {
+        $cacheName = $this->productListCacheName;
+        if (! $productList = $this->cache->get($cacheName)) {
+            $param_in = [];
+            $inputData = ['status' => 1];
+            $productList = $this->Product->getProductList($inputData);
+            if (empty($productList['error'])) {
+                $this->cache->save($cacheName, $productList, $this->defaultCacheTime);
+            }
+        }
+        return $productList;
+    }
+    public function retResponse($returnData, $code)
+    {
+        $this->output->set_status_header($code);
+        echo json_encode($returnData);exit;
+    }
+    public function cart_details($data= [])
+    {
+        if (!empty($data)) {
+            $this->cart_amount = 0;
+            $this->cart_count = 0;
+        }
+       
+        if(!empty($this->cart->contents())){
+            foreach ($this->cart->contents() as $key=>$row) {
+                $this->cart_amount = $this->cart_amount+$row['subtotal'];
+                $this->cart_count = $this->cart_count+1;
+            }
+        }
+        
+        if (!empty($data)) {
+            $data['amount'] = $this->cart_amount;
+            $data['count'] = $this->cart_count;
+            $data['status'] = '1';
+            
+            return $data;
+        }
+    }
   
     public function commit_rollback($data=array())
     {
@@ -62,5 +110,4 @@ class CI_BASE_Controller extends CI_Controller
         }
         return $data;
     }
- 
 }
