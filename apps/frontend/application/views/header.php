@@ -44,8 +44,8 @@
                         <ul>
                             <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
                             <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
-                            <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
-                            <li><a href="checkout.html"><i class="fa fa-user"></i> Checkout</a></li>
+                            <li><a href="/shopping/cart"><i class="fa fa-user"></i> My Cart</a></li>
+                            <li><a href="/shopping/checkout"><i class="fa fa-user"></i> Checkout</a></li>
 <?php if ($this->uname) {
     ?>
                            <li> <a class="cd-logout" href="<?php echo frontend_base_url?>logout-me"><i class="fa fa-user"></i> Logout</a></li>| &nbsp; <li> <?php echo $this->uname; ?>  </li> 
