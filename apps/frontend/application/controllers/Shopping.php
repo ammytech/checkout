@@ -8,6 +8,8 @@ class Shopping extends CI_BASE_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->customcart = new CI_CUSTOM_Cart();
+        
     }
 
     public function index()
@@ -52,10 +54,8 @@ class Shopping extends CI_BASE_Controller
                 'price' => set_value('price'),
                 'qty' => 1
             ];
-            
-            $this->cart->insert($insert_data);
+            $this->customcart->insert($insert_data);
             $data = $this->cart_details($data);
-            
             return $this->retResponse($data, $this->http_stat);
                     
         }

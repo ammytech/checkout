@@ -43,7 +43,7 @@
                                 <h2><a href="#"><?php echo $row['title']; ?></a></h2>
                                 
                                 <div class="product-carousel-price">
-                                    <ins><?php echo $row['price']?></ins> <del><?php echo $row['price']*$this->discount_rate?></del>
+                                    <ins><?php echo $row['price']?></ins> 
                                 </div> 
                             </div>
                            <?php 

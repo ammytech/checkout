@@ -23,7 +23,6 @@ class CI_BASE_Controller extends CI_Controller
     public $cart_count = 0;
     public $defaultCacheTime = 24*60*60;
     public $productListCacheName = 'product_list';
-    public $discount_rate = (120/100);
     public $http_stat = HTTP_OK;
     
     public function __construct()
@@ -52,6 +51,7 @@ class CI_BASE_Controller extends CI_Controller
         $this->load->library('cart');
         $this->cart_details();
         $this->load->model('UserModel', 'User');
+        
       
     }
     public function getProducts()
@@ -78,9 +78,10 @@ class CI_BASE_Controller extends CI_Controller
             $this->cart_amount = 0;
             $this->cart_count = 0;
         }
-       
-        if(!empty($this->cart->contents())){
-            foreach ($this->cart->contents() as $key=>$row) {
+        $this->customcart = new CI_CUSTOM_Cart();
+        
+        if(!empty($this->customcart->contents())){
+            foreach ($this->customcart->contents() as $key=>$row) {
                 $this->cart_amount = $this->cart_amount+$row['subtotal'];
                 $this->cart_count = $this->cart_count+1;
             }

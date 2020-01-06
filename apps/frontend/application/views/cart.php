@@ -22,7 +22,7 @@
                             
                             <h2><a href="#"><?php echo $row['title']; ?></a></h2>
                             <div class="product-sidebar-price">
-                                 <ins><?php echo $row['price']?></ins> <del><?php echo $row['price']*$this->discount_rate?></del>
+                                 <ins><?php echo $row['price']?></ins> <del><?php echo $row['price']?></del>
                             </div>                             
                         </div>
                        <?php 
@@ -44,22 +44,32 @@
                                             <th class="product-name">Product</th>
                                             <th class="product-price">Price</th>
                                           
-                                         
+                                             <th class="product-quantity">Quantity</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                        
-										<?php     foreach ($this->cart->contents() as $key=>$row) {
+										<?php   
+										if(empty($this->cart->contents())){
+										    $getCarts = [];
+										} else {
+										    $getCarts = $this->cart->contents();
+										}
+										foreach ($getCarts as $key=>$row) {
+										   
     ?>
-										 <tr class="cart_item remove_product_<?php echo $row['rowid']; ?>">
+										 <tr class="cart_item remove_product_<?php echo $key; ?>">
                                             <td class="product-remove">
-                                                <a title="Remove this item" data="<?php echo $row['rowid']; ?>" class="remove" href="javascript:void(0)">×</a> 
+                                                <a title="Remove this item" data="<?php echo $key; ?>" class="remove" href="javascript:void(0)">×</a> 
                                             </td>
                                             <td class="product-name">
-                                                <a href="single-product.html"><?php echo $row['name']; ?></a> 
+                                                <a href="#"><?php echo $row['name']; ?></a> 
                                             </td>
                                             <td class="product-price">
                                                 <span class="amount"><?php echo $this->currency_code.' '.$row['subtotal']; ?></span> 
+                                            </td>
+                                            <td class="product-name">
+                                                <?php echo $row['qty']; ?>
                                             </td>
 										  </tr>
                                         <?php 
