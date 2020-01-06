@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Jan 04, 2020 at 09:08 AM
+-- Generation Time: Jan 06, 2020 at 06:08 AM
 -- Server version: 5.7.28
 -- PHP Version: 7.4.1
 
@@ -103,7 +103,41 @@ INSERT INTO `backend_logs` (`id`, `name`, `uid`, `description`, `ip_address`) VA
 (60, 'Amir', 1, '{\"img\":\"2020\\/01\\/greeting-card_500x400.jpg\",\"title\":\"new year greeting cards 20201\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 20201\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-04 14:01:40\",\"table_name\":\"product\"}', '3232260865'),
 (61, 'Amir', 1, '{\"img\":\"2020\\/01\\/greeting-card_500x400.jpg\",\"title\":\"new year greeting cards 2020\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 2020\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-04 14:01:45\",\"table_name\":\"product\"}', '3232260865'),
 (62, 'Amir', 1, '{\"status\":\"1\",\"table_name\":\"product\"}', '3232260865'),
-(63, 'Amir', 1, '{\"img\":\"2020\\/01\\/greeting-card_500x400.jpg\",\"title\":\"new year greeting cards 2020\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 2020\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-04 14:01:54\",\"table_name\":\"product\"}', '3232260865');
+(63, 'Amir', 1, '{\"img\":\"2020\\/01\\/greeting-card_500x400.jpg\",\"title\":\"new year greeting cards 2020\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 2020\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-04 14:01:54\",\"table_name\":\"product\"}', '3232260865'),
+(64, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 14:41:51\",\"table_name\":\"backend_users\"}', '3232260865'),
+(65, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 19:49:27\",\"table_name\":\"backend_users\"}', '2886991873'),
+(66, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-04 19:52:34\",\"table_name\":\"backend_users\"}', '3232260865'),
+(67, 'Amir', 1, '{\"name\":\"testing2\",\"updatedAt\":\"2020-01-04 19:56:18\",\"table_name\":\"category\"}', '3232260865'),
+(68, 'Amir', 1, '{\"status\":\"0\",\"table_name\":\"category\"}', '3232260865'),
+(69, 'Amir', 1, '{\"status\":\"1\",\"table_name\":\"category\"}', '3232260865'),
+(70, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 00:10:55\",\"table_name\":\"backend_users\"}', '2886991873'),
+(71, 'Amir', 1, '{\"status\":\"1\",\"table_name\":\"product\"}', '3232260865'),
+(72, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 09:41:40\",\"table_name\":\"backend_users\"}', '2886991873'),
+(73, 'Amir', 1, '{\"name\":\"testing22\",\"updatedAt\":\"2020-01-05 09:54:01\",\"table_name\":\"category\"}', '3232260865'),
+(74, '', 0, '{\"username\":\"\",\"password\":\"\",\"createdAt\":\"2020-01-05 13:22:28\",\"table_name\":\"backend_users\"}', '2886991873'),
+(75, '', 0, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 13:25:03\",\"table_name\":\"backend_users\"}', '2886991873'),
+(76, '', 0, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 14:06:04\",\"table_name\":\"backend_users\"}', '2886991873'),
+(77, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 14:07:26\",\"table_name\":\"backend_users\"}', '2886991873'),
+(78, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 14:07:58\",\"table_name\":\"backend_users\"}', '2886991873'),
+(79, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 14:13:27\",\"table_name\":\"backend_users\"}', '2886991873'),
+(80, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 14:13:56\",\"table_name\":\"backend_users\"}', '2886991873'),
+(81, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:06:03\",\"table_name\":\"backend_users\"}', '2886991873'),
+(82, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:07:08\",\"table_name\":\"backend_users\"}', '2886991873'),
+(83, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:07:58\",\"table_name\":\"backend_users\"}', '2886991873'),
+(84, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:09:50\",\"table_name\":\"backend_users\"}', '2886991873'),
+(85, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:10:36\",\"table_name\":\"backend_users\"}', '2886991873'),
+(86, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:11:00\",\"table_name\":\"backend_users\"}', '2886991873'),
+(87, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:11:35\",\"table_name\":\"backend_users\"}', '2886991873'),
+(88, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:13:22\",\"table_name\":\"backend_users\"}', '2886991873'),
+(89, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:49:05\",\"table_name\":\"backend_users\"}', '2886991873'),
+(90, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:50:57\",\"table_name\":\"backend_users\"}', '2886991873'),
+(91, 'eaglecrystal24@gmail.com', 4, '{\"username\":\"eaglecrystal24@gmail.com\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 19:52:06\",\"table_name\":\"backend_users\"}', '2886991873'),
+(92, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-05 20:29:56\",\"table_name\":\"backend_users\"}', '2886991873'),
+(93, 'Amir', 1, '{\"status\":\"1\",\"table_name\":\"product\"}', '3232260865'),
+(94, '', 0, '{\"username\":\"amir\",\"password\":\"c415397d9382f8d187825c098d3385ea\",\"createdAt\":\"2020-01-06 11:09:43\",\"table_name\":\"backend_users\"}', '2886991873'),
+(95, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-06 11:09:47\",\"table_name\":\"backend_users\"}', '2886991873'),
+(96, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-06 11:11:09\",\"table_name\":\"backend_users\"}', '2886991873'),
+(97, 'Amir', 1, '{\"title\":\"calendar 2020\",\"slug\":\"calendar-2020\",\"summary\":\"calendar 2020\",\"description\":\"<p>calendar 2020<\\/p>\",\"price\":\"30.00\",\"price_rules\":\"{\\\"quantity\\\":3,\\\"discount\\\":15}\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-06 11:01:51\",\"table_name\":\"product\"}', '3232260865');
 
 -- --------------------------------------------------------
 
@@ -129,7 +163,7 @@ INSERT INTO `category` (`id`, `name`, `createdAt`, `updatedAt`, `status`) VALUES
 (3, 'calendar', '2020-01-03 12:07:27', NULL, '1'),
 (4, 'wedding', '2020-01-03 12:09:12', NULL, '1'),
 (5, 'testing1', '2020-01-04 07:05:09', '2020-01-04 13:51:58', '1'),
-(6, 'testing22', '2020-01-04 08:22:16', '2020-01-04 13:52:30', '1');
+(6, 'testing22', '2020-01-04 08:22:16', '2020-01-05 09:54:01', '1');
 
 -- --------------------------------------------------------
 
@@ -142,6 +176,15 @@ CREATE TABLE `orders` (
   `userId` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`orderId`, `userId`, `createdAt`) VALUES
+(1, 4, '2020-01-05 14:42:13'),
+(2, 4, '2020-01-05 14:46:41'),
+(3, 4, '2020-01-05 14:48:06');
 
 -- --------------------------------------------------------
 
@@ -158,6 +201,15 @@ CREATE TABLE `order_detail` (
   `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order_detail`
+--
+
+INSERT INTO `order_detail` (`id`, `orderId`, `productId`, `quantity`, `price`, `createdAt`, `status`) VALUES
+(1, 1, 2, 1, 30, '2020-01-05 14:42:13', 0),
+(2, 2, 1, 1, 22, '2020-01-05 14:46:41', 0),
+(3, 3, 2, 1, 30, '2020-01-05 14:48:06', 0);
 
 -- --------------------------------------------------------
 
@@ -186,7 +238,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `title`, `slug`, `summary`, `description`, `price`, `price_rules`, `img`, `createdAt`, `updatedAt`, `status`, `createdBy`, `updatedBy`) VALUES
-(1, 'new year greeting cards 2020', 'new-year-greeting-cards-2020', 'new year greeting cards 2020', '<p>new year greeting cards 2020</p>', 22.00, NULL, '2020/01/greeting-card_500x400.jpg', '2020-01-04 13:01:36', '2020-01-04 14:01:54', '1', 1, 1);
+(1, 'new year greeting cards 2020', 'new-year-greeting-cards-2020', 'new year greeting cards 2020', '<p>new year greeting cards 2020</p>', 22.00, '{\"quantity\":2,\"discount\":15}', '2020/01/greeting-card_500x400.jpg', '2020-01-04 13:01:36', '2020-01-04 14:01:54', '1', 1, 1),
+(2, 'calendar 2020', 'calendar-2020', 'calendar 2020', '<p>calendar 2020</p>', 30.00, '{\"quantity\":3,\"discount\":15}', '2020/01/battlw-grounds_500x400.PNG', '2020-01-05 00:01:37', '2020-01-06 11:01:51', '1', 1, 1),
+(3, 'posters', 'posters', 'posters', '<p>posters</p>', 35.00, NULL, '2020/01/brawl_500x400.PNG', '2020-01-05 20:01:47', NULL, '1', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -204,7 +258,9 @@ CREATE TABLE `product_category` (
 --
 
 INSERT INTO `product_category` (`productId`, `categoryId`) VALUES
-(1, 5);
+(1, 5),
+(2, 3),
+(3, 1);
 
 -- --------------------------------------------------------
 
@@ -234,7 +290,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `mobile`, `address`, `username`, `email`, `password`, `lastLogin`, `status`, `userTypeId`, `createdAt`, `ipAddress`, `updatedAt`, `isActive`) VALUES
-(1, 'Amir', '9833281227', 'Antop Hill Wadala', 'amir', 'infoamir225@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-04 11:11:13', '1', 1, '2020-01-03 17:48:00', 0, NULL, '1');
+(1, 'Amir', NULL, 'Antop Hill Wadala', 'amir', 'infoamir225@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-06 11:11:09', '1', 1, '2020-01-03 17:48:00', 0, NULL, '1'),
+(4, 'siteuser', '9833281227', 'kurla', 'eaglecrystal24@gmail.com', 'eaglecrystal24@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-05 19:52:06', '1', 2, '2020-01-05 14:05:44', 3232260865, NULL, '1');
 
 -- --------------------------------------------------------
 
@@ -312,7 +369,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `backend_logs`
 --
 ALTER TABLE `backend_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -324,25 +381,25 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_roles`

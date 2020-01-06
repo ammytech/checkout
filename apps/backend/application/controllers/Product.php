@@ -115,7 +115,8 @@ class Product extends CI_BASE_Controller
         }
         $this -> form_validation -> set_rules('summary', 'Summary', 'trim|max_length[500]');
         $this -> form_validation -> set_rules('description', 'Description', 'trim');
-        $this -> form_validation -> set_rules('price', 'Price', 'trim'); // add float value check
+        $this -> form_validation -> set_rules('price', 'Price', 'trim'); 
+        $this -> form_validation -> set_rules('price_rules', 'Price Rules', 'trim|callback_valid_json_price_rules'); 
         $this -> form_validation -> set_rules('category_term[]', 'Category', 'trim|required');
 
 
@@ -286,5 +287,15 @@ class Product extends CI_BASE_Controller
         }
         
         return $this->pojo->insertPojos($this->pojo->writeDb1, 'product_category', $tdata);
+    }
+    public function valid_json_price_rules($price_rules)
+    {
+        $price_rules = json_decode($price_rules, true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $message = 'pricing rules invalid json format';
+            $this->form_validation->set_message('valid_json_price_rules', $message);
+            
+            return FALSE;
+        }
     }
 }

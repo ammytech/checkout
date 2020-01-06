@@ -101,8 +101,8 @@ class CI_CUSTOM_Cart extends CI_Cart
                     $priceValue = intval($val['price']);
                     $discountValue = intval($product_price_rules_array['discount']);
                     $quantity = intval($product_price_rules_array['quantity']);
-                    // log_message('error', print_r($product_price_rules,true));
-                    if ($quantity <= $val['qty']) {
+                    
+                    if ($val['qty'] >= $quantity && $val['qty']/$quantity == 1) {
                         $this->_cart_contents[$key]['subtotal'] = $this->_cart_contents[$key]['subtotal'] - $discountValue;
                     }
                 }

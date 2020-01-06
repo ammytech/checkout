@@ -123,7 +123,16 @@ $row = $product_row_data;
 
                                     </div>
                                 </div>
-                               
+                               <div class="control-group ">
+                                    <label class="control-label">Price Rules</label>
+                                    <div class="controls <?php echo !empty($errors['price_rules']) ? 'has-error' : ''; ?>">
+                                        <input type="text" placeholder="Enter Price" name="price_rules" id="price_rules" class="form-control input-inline input-large" value="<?php echo set_value('price_rules', (isset($row['price_rules']) ? $row['price_rules'] : ''));?>">
+											<?php if (!empty($errors['price_rules'])) {
+                                             ?><span class="help-block"><?php echo $errors['price_rules']; ?></span><?php 
+                                         }?>
+
+                                    </div>
+                                </div>
                                   <div class="control-group ">
                                     <label class="control-label"> <?php echo((!empty($row['img']) && file_exists(PRODUCT_IMG_ABS_PATH.$row['img']))? 'Edit ' :'');?> Image </label>
                                     <div class="controls <?php echo !empty($errors['p_image']) ? 'has-error' : ''; ?>">
