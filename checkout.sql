@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql
--- Generation Time: Jan 06, 2020 at 06:08 AM
+-- Generation Time: Jan 06, 2020 at 08:53 AM
 -- Server version: 5.7.28
 -- PHP Version: 7.4.1
 
@@ -137,7 +137,11 @@ INSERT INTO `backend_logs` (`id`, `name`, `uid`, `description`, `ip_address`) VA
 (94, '', 0, '{\"username\":\"amir\",\"password\":\"c415397d9382f8d187825c098d3385ea\",\"createdAt\":\"2020-01-06 11:09:43\",\"table_name\":\"backend_users\"}', '2886991873'),
 (95, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-06 11:09:47\",\"table_name\":\"backend_users\"}', '2886991873'),
 (96, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-06 11:11:09\",\"table_name\":\"backend_users\"}', '2886991873'),
-(97, 'Amir', 1, '{\"title\":\"calendar 2020\",\"slug\":\"calendar-2020\",\"summary\":\"calendar 2020\",\"description\":\"<p>calendar 2020<\\/p>\",\"price\":\"30.00\",\"price_rules\":\"{\\\"quantity\\\":3,\\\"discount\\\":15}\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-06 11:01:51\",\"table_name\":\"product\"}', '3232260865');
+(97, 'Amir', 1, '{\"title\":\"calendar 2020\",\"slug\":\"calendar-2020\",\"summary\":\"calendar 2020\",\"description\":\"<p>calendar 2020<\\/p>\",\"price\":\"30.00\",\"price_rules\":\"{\\\"quantity\\\":3,\\\"discount\\\":15}\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-06 11:01:51\",\"table_name\":\"product\"}', '3232260865'),
+(98, '', 0, '{\"username\":\"amir\",\"password\":\"c415397d9382f8d187825c098d3385ea\",\"createdAt\":\"2020-01-06 13:50:13\",\"table_name\":\"backend_users\"}', '2886991873'),
+(99, 'amir', 1, '{\"username\":\"amir\",\"password\":\"63eefbd45d89e8c91f24b609f7539942\",\"createdAt\":\"2020-01-06 13:50:16\",\"table_name\":\"backend_users\"}', '2886991873'),
+(100, 'Amir', 1, '{\"title\":\"calendar 2020\",\"slug\":\"calendar-2020\",\"summary\":\"calendar 2020\",\"description\":\"<p>calendar 2020<\\/p>\",\"price\":\"30.00\",\"price_rules\":\"{\\\"multiItemSelectDiscount\\\":{\\\"quantity\\\":3,\\\"discount\\\":15}}\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-06 13:01:54\",\"table_name\":\"product\"}', '3232260865'),
+(101, 'Amir', 1, '{\"title\":\"new year greeting cards 2020\",\"slug\":\"new-year-greeting-cards-2020\",\"summary\":\"new year greeting cards 2020\",\"description\":\"<p>new year greeting cards 2020<\\/p>\",\"price\":\"22.00\",\"price_rules\":\"{\\\"multiItemSelectDiscount\\\":{\\\"quantity\\\":2,\\\"discount\\\":10}}\",\"updatedBy\":\"1\",\"updatedAt\":\"2020-01-06 13:01:53\",\"table_name\":\"product\"}', '3232260865');
 
 -- --------------------------------------------------------
 
@@ -238,8 +242,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `title`, `slug`, `summary`, `description`, `price`, `price_rules`, `img`, `createdAt`, `updatedAt`, `status`, `createdBy`, `updatedBy`) VALUES
-(1, 'new year greeting cards 2020', 'new-year-greeting-cards-2020', 'new year greeting cards 2020', '<p>new year greeting cards 2020</p>', 22.00, '{\"quantity\":2,\"discount\":15}', '2020/01/greeting-card_500x400.jpg', '2020-01-04 13:01:36', '2020-01-04 14:01:54', '1', 1, 1),
-(2, 'calendar 2020', 'calendar-2020', 'calendar 2020', '<p>calendar 2020</p>', 30.00, '{\"quantity\":3,\"discount\":15}', '2020/01/battlw-grounds_500x400.PNG', '2020-01-05 00:01:37', '2020-01-06 11:01:51', '1', 1, 1),
+(1, 'new year greeting cards 2020', 'new-year-greeting-cards-2020', 'new year greeting cards 2020', '<p>new year greeting cards 2020</p>', 22.00, '{\"multiItemSelectDiscount\":{\"quantity\":2,\"discount\":10}}', '2020/01/greeting-card_500x400.jpg', '2020-01-04 13:01:36', '2020-01-06 13:01:53', '1', 1, 1),
+(2, 'calendar 2020', 'calendar-2020', 'calendar 2020', '<p>calendar 2020</p>', 30.00, '{\"multiItemSelectDiscount\":{\"quantity\":3,\"discount\":15}}', '2020/01/battlw-grounds_500x400.PNG', '2020-01-05 00:01:37', '2020-01-06 13:01:54', '1', 1, 1),
 (3, 'posters', 'posters', 'posters', '<p>posters</p>', 35.00, NULL, '2020/01/brawl_500x400.PNG', '2020-01-05 20:01:47', NULL, '1', 1, NULL);
 
 -- --------------------------------------------------------
@@ -290,7 +294,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `mobile`, `address`, `username`, `email`, `password`, `lastLogin`, `status`, `userTypeId`, `createdAt`, `ipAddress`, `updatedAt`, `isActive`) VALUES
-(1, 'Amir', NULL, 'Antop Hill Wadala', 'amir', 'infoamir225@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-06 11:11:09', '1', 1, '2020-01-03 17:48:00', 0, NULL, '1'),
+(1, 'Amir', NULL, 'Antop Hill Wadala', 'amir', 'infoamir225@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-06 13:50:16', '1', 1, '2020-01-03 17:48:00', 0, NULL, '1'),
 (4, 'siteuser', '9833281227', 'kurla', 'eaglecrystal24@gmail.com', 'eaglecrystal24@gmail.com', '63eefbd45d89e8c91f24b609f7539942', '2020-01-05 19:52:06', '1', 2, '2020-01-05 14:05:44', 3232260865, NULL, '1');
 
 -- --------------------------------------------------------
@@ -369,7 +373,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `backend_logs`
 --
 ALTER TABLE `backend_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT for table `category`
