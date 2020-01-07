@@ -1,22 +1,21 @@
-1 change volumes path of source from "D:\shoppingcart\apps" to yout local apps path
+1 change volumes path of source from "C:\Users\checkout\apps" to yout local apps path
 
-2 change fastcgi_param as production in .conf file of nginx, default it is given as development
+2 default enviornment is development if want to change as production add fastcgi_param as production in .conf file of nginx and then change production config and credentials accordingly.
 
 3 move to root directory where docker-compose.yml is placed, mainly it is in root of the project and run below command
 
-	docker-compose up -d
+	docker-compose build --force-rm  // docker file changes to be reflected
+	docker-compose up -d --force-recreate //build through compose
+	
+	docker ps // to check list of containers
 
 4 add hosts, below I.P. is the default for all the apps
 	192.168.99.100	shopcart.local
 	192.168.99.100	shopcart.local.api
 	192.168.99.100	shopcart.local.backend
 	192.168.99.100  shopcart.local.assets
-	
-5 Doc link:
 
-https://docs.google.com/document/d/1fCcWq065AGmNlUWzc32ALw3iKWZEj4-788yHgBPUurw/edit#
-
-6. Config changes, if it's different 
+5. Config changes, if it's different then current one's
 
  API
 	/apps/api/application/config/development/config.php
@@ -48,20 +47,22 @@ https://docs.google.com/document/d/1fCcWq065AGmNlUWzc32ALw3iKWZEj4-788yHgBPUurw/
     'password' => 'shoopingcart3214',
     'database' => 'checkout',
 	
-7. To clear query data cache follow 2 steps
+6. To clear query data cache follow below steps, currenlty it is being used as file caching. If want to implement memcached or other, just load require adaptor and config changes of memcached in /apps/{}/application/memcached.php
 		1. Frontend: /apps/frontend/application/cache/ /apps/backend/application/cache/ delete all the cache files in it
 		2. Use Backend menu in Account, Clear Cache
 		
-8. Backend Credentials and url
+7. Backend Credentials and url (only userTypeId=1 is allowed to log in, if require add other users to AccessUser array)
 
 	http://shopcart.local.backend:8080/login
     username : amir
     password: amir
 		
 			
-9. Any update/insert in backend, clear the cache from menu to reflect it.
+8. Any update/insert in backend, clear the cache from menu to reflect it.
 	It can be called internally as we can detect the insert/update/delete actions.
 	
-10.
+9 Technical Doc link:
+
+https://docs.google.com/document/d/1fCcWq065AGmNlUWzc32ALw3iKWZEj4-788yHgBPUurw/edit#
 	
 	
