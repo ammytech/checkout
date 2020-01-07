@@ -1,9 +1,15 @@
 <?php if (! defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
+/**
+ * Custom cart to add custom rules in the cart
+ * custom rules can be drawn from table per product based or as per given
+ * 
+ * @author amirullahkhan
+ *
+ */
 class CI_CUSTOM_Cart extends CI_Cart
 {
-      
     public function __construct() {
         parent::__construct();
     }
@@ -121,7 +127,7 @@ class CI_CUSTOM_Cart extends CI_Cart
 	 * @param string $key
 	 * @return boolean
 	 */
-	public function cart_product_rules($product_price_rules, $val, $key)
+    public function cart_product_rules($product_price_rules, $val, $key='')
     {
         $product_price_rules_array = json_decode($product_price_rules, true);
         if (json_last_error() !== JSON_ERROR_NONE) {
@@ -131,21 +137,40 @@ class CI_CUSTOM_Cart extends CI_Cart
         }
         // Cart Subtotal calculation for multiItemSelectDiscount key for pricing rules
         if (! empty($product_price_rules_array['multiItemSelectDiscount'])) {
-            $this->cart_multi_item_discount($product_price_rules_array, $val, $key);
+            $response = $this->cart_multi_item_discount($product_price_rules_array, $val, $key);
+            if (!empty($val['returnOfferText'])) {
+                
+                return $response;
+            }
         }
     }
-	public function cart_multi_item_discount($product_price_rules_array, $val, $key)
+    /**
+     * Method calculates multiItemSelectDiscount and updates cart details accordingly
+     * @param array $product_price_rules_array
+     * @param float $val
+     * @param string $key
+     */
+	public function cart_multi_item_discount($product_price_rules_array, $val, $key = '')
     {
         $product_price_rules_multi_item_select = $product_price_rules_array['multiItemSelectDiscount'];
         $priceValue = $discountValue = 0;
-        $priceValue = intval($val['price']);
-        $discountValue = intval($product_price_rules_multi_item_select['discount']);
-        $quantity = intval($product_price_rules_multi_item_select['quantity']);
-
+        $priceValue = (float)($val['price']);
+        $discountValue = (float)($product_price_rules_multi_item_select['discount']);
+        $quantity = (int)($product_price_rules_multi_item_select['quantity']);
+        
+        if (!empty($val['returnOfferText'])) {
+            return ['offer_text' => 'buy ' . $quantity .' and get disocunt of ' . $discountValue ];
+        }
+        
         if ($val['qty'] >= $quantity) {
             $numberOfTimeApplyDiscount = floor($val['qty'] / $quantity);
             $totalDiscountAmount = ($discountValue * $numberOfTimeApplyDiscount);
-            $this->_cart_contents[$key]['subtotal'] = $this->_cart_contents[$key]['subtotal'] - $totalDiscountAmount;
+            if ($this->_cart_contents[$key]['subtotal'] > $totalDiscountAmount) {
+                $this->_cart_contents[$key]['subtotal'] = $this->_cart_contents[$key]['subtotal'] - $totalDiscountAmount;
+            } else {
+                log_message('error', 'discount amount is greater than total cart amount, in correct json data of multiItemSelectDiscount pricing rules');
+            }
+            
         }
     }
     

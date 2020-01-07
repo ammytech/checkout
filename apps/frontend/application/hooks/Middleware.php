@@ -1,6 +1,13 @@
 <?php  if (! defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
+/**
+ * It is bridge between network and application
+ * Loads Pojo Model, to talk with database directly, Pojo is being developed
+ * 
+ * @author amirullahkhan
+ *
+ */
 class Middleware
 {
     public $ip_address = [];

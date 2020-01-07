@@ -42,7 +42,8 @@
                                             <th class="product-remove">Action</th>
                                           
                                             <th class="product-name">Product</th>
-                                            <th class="product-price">Price</th>
+                                            <th class="product-price">Per Item Price</th>
+                                            <th class="product-price">Total Price</th>
                                           
                                              <th class="product-quantity">Quantity</th>
                                         </tr>
@@ -64,6 +65,9 @@
                                             </td>
                                             <td class="product-name">
                                                 <a href="#"><?php echo $row['name']; ?></a> 
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="amount"><?php echo $this->currency_code.' '.$row['price']; ?></span> 
                                             </td>
                                             <td class="product-price">
                                                 <span class="amount"><?php echo $this->currency_code.' '.$row['subtotal']; ?></span> 

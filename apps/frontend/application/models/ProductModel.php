@@ -1,6 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/**
+ * Product method has CRUD related product 
+ * @author amirullahkhan
+ *
+ */
 class ProductModel extends CI_BASE_Model
 {
     public function __construct()
@@ -9,6 +13,12 @@ class ProductModel extends CI_BASE_Model
         parent::__construct();
         
     }
+    /**
+     * Method fetches product data
+     * 
+     * @param array $inputData
+     * @return $result
+     */
     public function getProduct($inputData){
         $param_data = (!empty($inputData['where']) ? $inputData['where'] : []);
         $qyeryData = [
@@ -22,7 +32,11 @@ class ProductModel extends CI_BASE_Model
         
         return $result;
     }
-    
+    /**
+     * Method fetchs product with different params as a request
+     * @param unknown $inputData
+     * @return unknown
+     */
     public function getProductList($inputData){
         $param_data = (!empty($inputData['where']) ? $inputData['where'] : []);
         

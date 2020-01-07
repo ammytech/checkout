@@ -1,6 +1,10 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/**
+ * User Model has all the CRUD releated users
+ * @author amirullahkhan
+ *
+ */
 class UserModel extends CI_BASE_Model
 {    
     public function __construct()
@@ -9,7 +13,12 @@ class UserModel extends CI_BASE_Model
         parent::__construct();
         
     }
-    
+    /**
+     * Method fetches users data 
+     * $data is used to fetch required records
+     * @param array $data
+     * @return $result
+     */
     public function getUser($data){
         $param_data = $data;
         
@@ -25,6 +34,11 @@ class UserModel extends CI_BASE_Model
         
         return $result;
     }
+    /**
+     * Method updates isActive column as disbale
+     * @param array $userResult
+     * @return $result
+     */
     public function userInActive($userResult){
         if(empty($userResult['id'])){
             

@@ -27,6 +27,7 @@
 						echo form_hidden('price', $row['price']); ?>
                           <a href="javascript:void(0)" class="add-to-cart-link" data="<?php echo $row['id']?>">
                           <i class="fa fa-shopping-cart"></i> Add to cart</a>
+                          
                        <?php
                         $btn = array(
                             'class' => 'addCart_btn_ hide',
@@ -45,6 +46,11 @@
                                 <div class="product-carousel-price">
                                     <ins><?php echo $row['price']?></ins> 
                                 </div> 
+                                <div>
+                                <?php if(!empty($row['offer_text'])) {?>
+                                  <p> <?php echo $row['offer_text'];?></p>
+                                  <?php }?>
+                                </div>
                             </div>
                            <?php 
 							}?>

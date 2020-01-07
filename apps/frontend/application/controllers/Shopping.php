@@ -2,7 +2,16 @@
 if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
 }
-
+/**
+ * Shopping Class has cart related method
+ * 
+ * To add, remove and update the cart details
+ * 
+ * Checkout and Save order functionality kept here
+ * 
+ * @author amirullahkhan
+ *
+ */
 class Shopping extends CI_BASE_Controller
 {
     public function __construct()
@@ -15,7 +24,11 @@ class Shopping extends CI_BASE_Controller
     public function index()
     {
     }
-
+    /**
+     * Method add items in a cart
+     * It has basic validation for the request params
+     * @return json
+     */
     public function add()
     {
         $this->load->library('form_validation');
@@ -75,8 +88,7 @@ class Shopping extends CI_BASE_Controller
         $this->form_validation->set_rules($config);
         $data['status'] = '0';
         if ($this->form_validation->run() == false) {
-            //echo $this->db->last_query();exit;
-                    $this->form_validation->set_error_delimiters('<p style="color:#FF0000">', '</p>');
+            $this->form_validation->set_error_delimiters('<p style="color:#FF0000">', '</p>');
             $data['errorCount'] = $this->form_validation->error_array();
 
             if ($this->input->is_ajax_request()) {
@@ -91,7 +103,7 @@ class Shopping extends CI_BASE_Controller
             // Update cart data, after cancle.
             $this->cart->update($data);
             $data = $this->cart_details($data);
-            
+
             return $this->retResponse($data, $this->http_stat);
         }
     }
@@ -108,6 +120,11 @@ class Shopping extends CI_BASE_Controller
         $this->data['products'] = $this->getProducts();
         $this->load->view('checkout', $this->data);
     }
+    /**
+     * saves order and ask to authenticate if not logged in on making order
+     * It sends email to user, just need add username and password in sitemail() located in helpers i.e. cfunctions_helper.php
+     * @return json
+     */
     public function save_order()
     {
         if ($this->input->is_ajax_request()) {

@@ -59,6 +59,9 @@ https://docs.google.com/document/d/1fCcWq065AGmNlUWzc32ALw3iKWZEj4-788yHgBPUurw/
     password: amir
 		
 			
+9. Any update/insert in backend, clear the cache from menu to reflect it.
+	It can be called internally as we can detect the insert/update/delete actions.
 	
+10.
 	
 	
