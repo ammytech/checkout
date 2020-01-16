@@ -4,6 +4,7 @@ Short Description:
 	-It also has Pricing Rules for multiple item select product wise, say buy 3 items and pay 20 less to total cart amount. If 
 	customer purchases 6 or 9, again discount of same is applied as the pricing rules says discount on buy of three.
 	-Pricing rules can be defined differently for each product.
+
 Installation
 
 First, clone this repository:Then follow below steps
